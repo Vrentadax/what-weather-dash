@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- bootstrap init -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>What Weather Dash</title>
+</head>
+
+<body>
+
+    <!-- jumbotron -->
+    <header>
+        <div class="jumbotron">
+            <h1 class="display-4 text-center">What Weather Dash</h1>
+            <p class="lead text-center mt-3">Want to know what the weather will be? Search a city below and find out!
+            </p>
+        </div>
+    </header>
+
+    <!-- main -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+
+                <!-- city form -->
+                <form id="city-form">
+                    <div class="form-group">
+                        <label class="font-weight-bold" for="city">Search for a city:</label>
+                        <input class="form-control" type="text" name="city" id="city" placeholder="Search">
+                        <input class="form-control" type="submit" name="submit-city" id="submit-city">
+                    </div>
+                </form>
+                <h4>Previous Searches</h4>
+                <ul id="prevSearches"></ul>
+
+            </div>
+            <div id="weather-forecast" class="col-lg-9 col-md-6 border">
+                <h4 id="city-name"></h4>
+                <p id="city-weather"></p>
+                <p id="city-temp"></p>
+                <p id="city-wind"></p>
+                <p id="city-humid"></p>
+                <p id="city-index"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5 day forecast -->
+    <div class="container mt-3">
+        <div id="five-forecast" class="row">
+        </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script type="text/javascript" src="./assets/js/script.js"></script>
+</body>
+
+</html>
